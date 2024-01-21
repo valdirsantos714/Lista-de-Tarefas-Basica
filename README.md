@@ -4,6 +4,10 @@
 
 Site Básico de lista de tarefas envolvendo eventos, estilos e códigos em HTML
 
+## Aplicação
+O site foi publicado no Netlify no endereço:
+https://lista-de-tarefasb458.netlify.app/
+
 ## Tecnologias Utilizadas
 - HTML
 - CSS
