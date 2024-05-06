@@ -1,14 +1,39 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body {
     background-image: url(assets/Capturar.JPG);
+    background-position: center;  /*alinhada imagem de fundo do site*/
+    background-size: cover;
 }
 
+:root { /*variaveis de cores globais: para o modo light do sistema*/
+    --bg-color: rgba(0, 255, 255, 0.5);
+    --font-color: black;
+    --input-bg: white;
+    --btn-bg: white;
+}
+
+@media (prefers-color-scheme: dark) { /*variaveis de cores globais: para o modo dark do sistema*/
+    :root {
+        --bg-color: rgba(0, 38, 255, 0.822);
+        --font-color: white;
+        --input-bg: black;
+        --btn-bg: black;
+    }
+    
+    html {
+        color-scheme: dark;
+    }
+}
+
+
+
 #div {
-    background-color: rgba(0, 255, 255, 0.5);
+    background-color: var(--bg-color);
     margin: auto;
     text-align: center;
     width: 50vw;
@@ -18,19 +43,24 @@ body {
 }
 
 h1 {
+    color: var(--font-color);
     font-size: 50px;
     padding: 15px;
 }
 
 p {
+    color: var(--font-color);
     display: inline-block;
     font-size: 25px;
 }
 
 #input {
-    padding: 2px;
+    color: var(--font-color);
+    background-color: var(--input-bg);
+    padding: 5px;
     height: 5vh;
     font-size: 22px;
+    border: none;
 }
 
 #butao {
@@ -40,26 +70,7 @@ p {
     margin-top: 20px;
     padding: 5px;
     border-radius: 10px;
+    color: var(--font-color);
+    background-color: var(--btn-bg);
     cursor: pointer;
 }
-
-ul {
-    display: inline-block;
-}
-
-li {
-    list-style-type: none;
-    font-size: 30px;  
-}
-
-li:first-child {
-    margin: 10px 0 0 0;
-    
-}
-/*
-#remover {
-    margin: 0 0 0 5px;
-    padding: 2px;
-    font-size: 17px;
-}*/
-
